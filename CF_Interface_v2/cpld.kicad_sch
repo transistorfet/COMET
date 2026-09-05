@@ -16,8 +16,8 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "U"
-				(at 0 0 0)
+			(property "Reference" "U11"
+				(at 0 35.56 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -25,7 +25,7 @@
 				)
 			)
 			(property "Value" "CPLD"
-				(at 0 0 0)
+				(at 0 33.02 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -51,7 +51,7 @@
 				)
 			)
 			(property "Description" ""
-				(at 0 0 0)
+				(at 0 5.08 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -69,8 +69,8 @@
 			)
 			(symbol "CPLD_1_1"
 				(rectangle
-					(start -12.7 25.4)
-					(end 12.7 -25.4)
+					(start -12.7 30.48)
+					(end 12.7 -29.21)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -80,7 +80,7 @@
 					)
 				)
 				(pin input inverted
-					(at -17.78 20.32 0)
+					(at -17.78 25.4 0)
 					(length 5.08)
 					(name "~{RESET}"
 						(effects
@@ -98,7 +98,7 @@
 					)
 				)
 				(pin output inverted
-					(at 17.78 -22.86 180)
+					(at 17.78 -17.78 180)
 					(length 5.08)
 					(name "~{DTACK_DRV}"
 						(effects
@@ -116,9 +116,9 @@
 					)
 				)
 				(pin input line
-					(at -17.78 -2.54 0)
+					(at -17.78 2.54 0)
 					(length 5.08)
-					(name "FC0"
+					(name "AM0"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -134,7 +134,7 @@
 					)
 				)
 				(pin input inverted
-					(at -17.78 7.62 0)
+					(at -17.78 12.7 0)
 					(length 5.08)
 					(name "~{WR}"
 						(effects
@@ -152,7 +152,7 @@
 					)
 				)
 				(pin input inverted
-					(at -17.78 12.7 0)
+					(at -17.78 17.78 0)
 					(length 5.08)
 					(name "~{LDS}"
 						(effects
@@ -170,7 +170,7 @@
 					)
 				)
 				(pin input inverted
-					(at -17.78 10.16 0)
+					(at -17.78 15.24 0)
 					(length 5.08)
 					(name "~{UDS}"
 						(effects
@@ -188,7 +188,7 @@
 					)
 				)
 				(pin output line
-					(at 17.78 2.54 180)
+					(at 17.78 7.62 180)
 					(length 5.08)
 					(name "DDIR"
 						(effects
@@ -206,7 +206,7 @@
 					)
 				)
 				(pin output inverted
-					(at 17.78 -2.54 180)
+					(at 17.78 2.54 180)
 					(length 5.08)
 					(name "~{DBEN}"
 						(effects
@@ -224,7 +224,25 @@
 					)
 				)
 				(pin input line
-					(at -17.78 2.54 0)
+					(at -17.78 -10.16 0)
+					(length 5.08)
+					(name "AM5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "20"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 7.62 0)
 					(length 5.08)
 					(name "FUNC1"
 						(effects
@@ -242,7 +260,7 @@
 					)
 				)
 				(pin output inverted
-					(at 17.78 22.86 180)
+					(at 17.78 27.94 180)
 					(length 5.08)
 					(name "~{RDSTAT}"
 						(effects
@@ -260,7 +278,7 @@
 					)
 				)
 				(pin output inverted
-					(at 17.78 20.32 180)
+					(at 17.78 25.4 180)
 					(length 5.08)
 					(name "~{WRCON}"
 						(effects
@@ -278,7 +296,7 @@
 					)
 				)
 				(pin output line
-					(at 17.78 0 180)
+					(at 17.78 5.08 180)
 					(length 5.08)
 					(name "CF_DDIR"
 						(effects
@@ -296,7 +314,7 @@
 					)
 				)
 				(pin input line
-					(at -17.78 -20.32 0)
+					(at -17.78 -24.13 0)
 					(length 5.08)
 					(name "T0"
 						(effects
@@ -314,7 +332,7 @@
 					)
 				)
 				(pin input line
-					(at -17.78 -22.86 0)
+					(at -17.78 -26.67 0)
 					(length 5.08)
 					(name "T1"
 						(effects
@@ -332,7 +350,7 @@
 					)
 				)
 				(pin output inverted
-					(at 17.78 15.24 180)
+					(at 17.78 20.32 180)
 					(length 5.08)
 					(name "~{CF_CS0}"
 						(effects
@@ -350,7 +368,7 @@
 					)
 				)
 				(pin output inverted
-					(at 17.78 12.7 180)
+					(at 17.78 17.78 180)
 					(length 5.08)
 					(name "~{CF_CS1}"
 						(effects
@@ -368,7 +386,7 @@
 					)
 				)
 				(pin output inverted
-					(at 17.78 10.16 180)
+					(at 17.78 15.24 180)
 					(length 5.08)
 					(name "~{CF_RD}"
 						(effects
@@ -386,7 +404,7 @@
 					)
 				)
 				(pin output inverted
-					(at 17.78 7.62 180)
+					(at 17.78 12.7 180)
 					(length 5.08)
 					(name "~{CF_WR}"
 						(effects
@@ -403,8 +421,44 @@
 						)
 					)
 				)
+				(pin input line
+					(at -17.78 -5.08 0)
+					(length 5.08)
+					(name "AM3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 -7.62 0)
+					(length 5.08)
+					(name "AM4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "41"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 				(pin input clock
-					(at -17.78 22.86 0)
+					(at -17.78 27.94 0)
 					(length 5.08)
 					(name "CLK"
 						(effects
@@ -422,7 +476,7 @@
 					)
 				)
 				(pin input inverted
-					(at -17.78 15.24 0)
+					(at -17.78 20.32 0)
 					(length 5.08)
 					(name "~{SEL}"
 						(effects
@@ -440,7 +494,7 @@
 					)
 				)
 				(pin input line
-					(at -17.78 -12.7 0)
+					(at -17.78 -16.51 0)
 					(length 5.08)
 					(name "A5"
 						(effects
@@ -458,7 +512,7 @@
 					)
 				)
 				(pin input line
-					(at -17.78 -15.24 0)
+					(at -17.78 -19.05 0)
 					(length 5.08)
 					(name "A4"
 						(effects
@@ -476,9 +530,9 @@
 					)
 				)
 				(pin input line
-					(at -17.78 -7.62 0)
+					(at -17.78 -2.54 0)
 					(length 5.08)
-					(name "FC2"
+					(name "AM2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -494,9 +548,9 @@
 					)
 				)
 				(pin input line
-					(at -17.78 -5.08 0)
+					(at -17.78 0 0)
 					(length 5.08)
-					(name "FC1"
+					(name "AM1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1220,6 +1274,1596 @@
 						)
 					)
 					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "CPLD_1"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U11"
+				(at 0 35.56 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "CPLD"
+				(at 0 33.02 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "COMET_footprints:Package_PLCC-44"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "CPLD_1_1_1"
+				(rectangle
+					(start -12.7 30.48)
+					(end 12.7 -29.21)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin input inverted
+					(at -17.78 25.4 0)
+					(length 5.08)
+					(name "~{RESET}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output inverted
+					(at 17.78 -17.78 180)
+					(length 5.08)
+					(name "~{DTACK_DRV}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 2.54 0)
+					(length 5.08)
+					(name "AM0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input inverted
+					(at -17.78 12.7 0)
+					(length 5.08)
+					(name "~{WR}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input inverted
+					(at -17.78 17.78 0)
+					(length 5.08)
+					(name "~{LDS}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input inverted
+					(at -17.78 15.24 0)
+					(length 5.08)
+					(name "~{UDS}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "17"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 17.78 7.62 180)
+					(length 5.08)
+					(name "DDIR"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "18"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output inverted
+					(at 17.78 2.54 180)
+					(length 5.08)
+					(name "~{DBEN}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "19"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 -10.16 0)
+					(length 5.08)
+					(name "AM5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "20"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 -7.62 0)
+					(length 5.08)
+					(name "AM4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "21"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output inverted
+					(at 17.78 -20.32 180)
+					(length 5.08)
+					(name "~{BERR_DRV}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "24"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 7.62 0)
+					(length 5.08)
+					(name "FUNC1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "25"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output inverted
+					(at 17.78 27.94 180)
+					(length 5.08)
+					(name "~{RDSTAT}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "27"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output inverted
+					(at 17.78 25.4 180)
+					(length 5.08)
+					(name "~{WRCON}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "28"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 17.78 5.08 180)
+					(length 5.08)
+					(name "CF_DDIR"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "29"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 -24.13 0)
+					(length 5.08)
+					(name "T0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "31"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 -26.67 0)
+					(length 5.08)
+					(name "T1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "33"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output inverted
+					(at 17.78 20.32 180)
+					(length 5.08)
+					(name "~{CF_CS0}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "34"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output inverted
+					(at 17.78 17.78 180)
+					(length 5.08)
+					(name "~{CF_CS1}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "36"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output inverted
+					(at 17.78 15.24 180)
+					(length 5.08)
+					(name "~{CF_RD}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "37"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output inverted
+					(at 17.78 12.7 180)
+					(length 5.08)
+					(name "~{CF_WR}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "39"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 -5.08 0)
+					(length 5.08)
+					(name "AM3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input clock
+					(at -17.78 27.94 0)
+					(length 5.08)
+					(name "CLK"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "43"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input inverted
+					(at -17.78 20.32 0)
+					(length 5.08)
+					(name "~{SEL}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "44"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 -16.51 0)
+					(length 5.08)
+					(name "A5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 -19.05 0)
+					(length 5.08)
+					(name "A4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 -2.54 0)
+					(length 5.08)
+					(name "AM2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 0 0)
+					(length 5.08)
+					(name "AM1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "CPLD_1_2_1"
+				(rectangle
+					(start -10.16 5.08)
+					(end 10.16 -7.62)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin input line
+					(at -15.24 0 0)
+					(length 5.08)
+					(name "TMS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input clock
+					(at -15.24 2.54 0)
+					(length 5.08)
+					(name "TCK"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "32"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 15.24 -5.08 180)
+					(length 5.08)
+					(name "TDO"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "38"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -15.24 -5.08 0)
+					(length 5.08)
+					(name "TDI"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "CPLD_1_3_1"
+				(pin power_in line
+					(at -5.08 -10.16 90)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -2.54 10.16 270)
+					(length 5.08)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -2.54 -10.16 90)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "22"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 2.54 10.16 270)
+					(length 5.08)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "23"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -5.08 10.16 270)
+					(length 5.08)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 2.54 -10.16 90)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "30"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 5.08 10.16 270)
+					(length 5.08)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "35"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 5.08 -10.16 90)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "42"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "CPLD_2"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U11"
+				(at 0 35.56 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "CPLD"
+				(at 0 33.02 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "COMET_footprints:Package_PLCC-44"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "CPLD_2_1_1"
+				(rectangle
+					(start -12.7 30.48)
+					(end 12.7 -29.21)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin input inverted
+					(at -17.78 25.4 0)
+					(length 5.08)
+					(name "~{RESET}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output inverted
+					(at 17.78 -17.78 180)
+					(length 5.08)
+					(name "~{DTACK_DRV}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 2.54 0)
+					(length 5.08)
+					(name "AM0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input inverted
+					(at -17.78 12.7 0)
+					(length 5.08)
+					(name "~{WR}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input inverted
+					(at -17.78 17.78 0)
+					(length 5.08)
+					(name "~{LDS}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input inverted
+					(at -17.78 15.24 0)
+					(length 5.08)
+					(name "~{UDS}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "17"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 17.78 7.62 180)
+					(length 5.08)
+					(name "DDIR"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "18"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output inverted
+					(at 17.78 2.54 180)
+					(length 5.08)
+					(name "~{DBEN}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "19"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 -10.16 0)
+					(length 5.08)
+					(name "AM5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "20"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 7.62 0)
+					(length 5.08)
+					(name "FUNC1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "25"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output inverted
+					(at 17.78 27.94 180)
+					(length 5.08)
+					(name "~{RDSTAT}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "27"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output inverted
+					(at 17.78 25.4 180)
+					(length 5.08)
+					(name "~{WRCON}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "28"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 17.78 5.08 180)
+					(length 5.08)
+					(name "CF_DDIR"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "29"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 -24.13 0)
+					(length 5.08)
+					(name "T0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "31"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 -26.67 0)
+					(length 5.08)
+					(name "T1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "33"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output inverted
+					(at 17.78 20.32 180)
+					(length 5.08)
+					(name "~{CF_CS0}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "34"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output inverted
+					(at 17.78 17.78 180)
+					(length 5.08)
+					(name "~{CF_CS1}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "36"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output inverted
+					(at 17.78 15.24 180)
+					(length 5.08)
+					(name "~{CF_RD}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "37"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output inverted
+					(at 17.78 12.7 180)
+					(length 5.08)
+					(name "~{CF_WR}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "39"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 -5.08 0)
+					(length 5.08)
+					(name "AM3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 -7.62 0)
+					(length 5.08)
+					(name "AM4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "41"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input clock
+					(at -17.78 27.94 0)
+					(length 5.08)
+					(name "CLK"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "43"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input inverted
+					(at -17.78 20.32 0)
+					(length 5.08)
+					(name "~{SEL}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "44"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 -16.51 0)
+					(length 5.08)
+					(name "A5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 -19.05 0)
+					(length 5.08)
+					(name "A4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 -2.54 0)
+					(length 5.08)
+					(name "AM2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 0 0)
+					(length 5.08)
+					(name "AM1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "CPLD_2_2_1"
+				(rectangle
+					(start -10.16 5.08)
+					(end 10.16 -7.62)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin input line
+					(at -15.24 0 0)
+					(length 5.08)
+					(name "TMS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input clock
+					(at -15.24 2.54 0)
+					(length 5.08)
+					(name "TCK"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "32"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 15.24 -5.08 180)
+					(length 5.08)
+					(name "TDO"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "38"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -15.24 -5.08 0)
+					(length 5.08)
+					(name "TDI"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "CPLD_2_3_1"
+				(pin power_in line
+					(at -5.08 -10.16 90)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -2.54 10.16 270)
+					(length 5.08)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -2.54 -10.16 90)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "22"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 2.54 10.16 270)
+					(length 5.08)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "23"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -5.08 10.16 270)
+					(length 5.08)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 2.54 -10.16 90)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "30"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 5.08 10.16 270)
+					(length 5.08)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "35"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 5.08 -10.16 90)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "42"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2611,6 +4255,16 @@
 	)
 	(wire
 		(pts
+			(xy 238.76 120.65) (xy 251.46 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "05aaa801-f11d-443c-a144-b6754fe92fcb")
+	)
+	(wire
+		(pts
 			(xy 99.06 185.42) (xy 114.3 185.42)
 		)
 		(stroke
@@ -2651,7 +4305,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 96.52) (xy 124.46 96.52)
+			(xy 66.04 105.41) (xy 124.46 105.41)
 		)
 		(stroke
 			(width 0)
@@ -2841,6 +4495,16 @@
 	)
 	(wire
 		(pts
+			(xy 66.04 86.36) (xy 124.46 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "29d4bf2f-c088-40f5-91dd-e6c39e5c4252")
+	)
+	(wire
+		(pts
 			(xy 238.76 96.52) (xy 251.46 96.52)
 		)
 		(stroke
@@ -2921,7 +4585,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 88.9) (xy 124.46 88.9)
+			(xy 66.04 97.79) (xy 124.46 97.79)
 		)
 		(stroke
 			(width 0)
@@ -3261,6 +4925,16 @@
 	)
 	(wire
 		(pts
+			(xy 160.02 99.06) (xy 214.63 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "89ef8a12-c02a-4fa4-9441-cd8a7e6e554f")
+	)
+	(wire
+		(pts
 			(xy 160.02 73.66) (xy 167.64 73.66)
 		)
 		(stroke
@@ -3451,6 +5125,26 @@
 	)
 	(wire
 		(pts
+			(xy 66.04 88.9) (xy 124.46 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b8c58f5f-d85b-407d-b0a6-e49f3c820a1c")
+	)
+	(wire
+		(pts
+			(xy 214.63 99.06) (xy 214.63 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bcff2b49-6548-4353-9a03-6ee53fbc5361")
+	)
+	(wire
+		(pts
 			(xy 83.82 175.26) (xy 99.06 175.26)
 		)
 		(stroke
@@ -3541,7 +5235,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 86.36) (xy 124.46 86.36)
+			(xy 66.04 95.25) (xy 124.46 95.25)
 		)
 		(stroke
 			(width 0)
@@ -3691,6 +5385,16 @@
 	)
 	(wire
 		(pts
+			(xy 66.04 83.82) (xy 124.46 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dfd67472-5dbe-4918-a7fd-765355fc5091")
+	)
+	(wire
+		(pts
 			(xy 114.3 33.02) (xy 104.14 33.02)
 		)
 		(stroke
@@ -3708,6 +5412,16 @@
 			(type default)
 		)
 		(uuid "e677ec30-0157-474c-b949-6547cfb3c125")
+	)
+	(wire
+		(pts
+			(xy 214.63 120.65) (xy 226.06 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e7aa01c3-2e63-4f82-9396-cc7d16c9d87a")
 	)
 	(wire
 		(pts
@@ -3731,7 +5445,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 93.98) (xy 124.46 93.98)
+			(xy 66.04 102.87) (xy 124.46 102.87)
 		)
 		(stroke
 			(width 0)
@@ -3867,7 +5581,27 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
+			)
+		)
+	)
+	(global_label "AM4"
+		(shape input)
+		(at 66.04 86.36 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "26d01e32-fb36-45df-8604-57ab4ddb1314")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 59.3053 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 	)
@@ -3889,13 +5623,12 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 	)
 	(global_label "T1"
 		(shape input)
-		(at 66.04 96.52 180)
+		(at 66.04 105.41 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3905,19 +5638,18 @@
 		)
 		(uuid "3d69dc29-e2e3-4067-bf3b-86fb090b08c0")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 61.4498 96.4406 0)
+			(at 61.4498 105.3306 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
 			)
 		)
 	)
 	(global_label "A4"
 		(shape input)
-		(at 66.04 88.9 180)
+		(at 66.04 97.79 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3927,13 +5659,33 @@
 		)
 		(uuid "444c530c-53dc-4b24-9caf-55e4273a637e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 61.3288 88.8206 0)
+			(at 61.3288 97.7106 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
+			)
+		)
+	)
+	(global_label "AM5"
+		(shape input)
+		(at 66.04 88.9 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "4abecbea-8780-4f97-bb7a-a7aff9080d7a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 59.3053 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 	)
@@ -3955,7 +5707,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 	)
@@ -3977,7 +5728,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 	)
@@ -3999,11 +5749,10 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 	)
-	(global_label "FC2"
+	(global_label "AM2"
 		(shape input)
 		(at 66.04 81.28 180)
 		(fields_autoplaced yes)
@@ -4015,13 +5764,33 @@
 		)
 		(uuid "761c2f5b-7493-45ef-9ee0-1aae07278ccb")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 60.0588 81.2006 0)
+			(at 59.3053 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
+			)
+		)
+	)
+	(global_label "AM3"
+		(shape input)
+		(at 66.04 83.82 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "7e0f650c-7427-4a96-bece-89c697c74f3f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 59.3053 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 	)
@@ -4043,7 +5812,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 	)
@@ -4065,7 +5833,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
 			)
 		)
 	)
@@ -4087,7 +5854,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
 			)
 		)
 	)
@@ -4109,11 +5875,10 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
 			)
 		)
 	)
-	(global_label "FC1"
+	(global_label "AM1"
 		(shape input)
 		(at 66.04 78.74 180)
 		(fields_autoplaced yes)
@@ -4125,13 +5890,12 @@
 		)
 		(uuid "c87b30f9-906e-4390-b394-888faaa036d3")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 60.0588 78.6606 0)
+			(at 59.3053 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
 			)
 		)
 	)
@@ -4153,7 +5917,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 	)
@@ -4175,7 +5938,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
 			)
 		)
 	)
@@ -4197,11 +5959,10 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
 			)
 		)
 	)
-	(global_label "FC0"
+	(global_label "AM0"
 		(shape input)
 		(at 66.04 76.2 180)
 		(fields_autoplaced yes)
@@ -4213,13 +5974,12 @@
 		)
 		(uuid "ecc3c0f4-9a02-4705-a581-409b7097b6be")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 60.0588 76.1206 0)
+			(at 59.3053 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
 			)
 		)
 	)
@@ -4241,7 +6001,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 	)
@@ -4263,13 +6022,12 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 	)
 	(global_label "A5"
 		(shape input)
-		(at 66.04 86.36 180)
+		(at 66.04 95.25 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4279,13 +6037,12 @@
 		)
 		(uuid "f6feab73-5c7f-4f4a-abea-ddcc2dc4f3cb")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 61.3288 86.2806 0)
+			(at 61.3288 95.1706 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
 			)
 		)
 	)
@@ -4307,7 +6064,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
 			)
 		)
 	)
@@ -4329,13 +6085,33 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
+			)
+		)
+	)
+	(global_label "~{BERR}"
+		(shape output)
+		(at 251.46 120.65 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "fbebde2c-accc-4fd1-bb2c-1a2e53a88cc5")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 259.4042 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 	)
 	(global_label "T0"
 		(shape input)
-		(at 66.04 93.98 180)
+		(at 66.04 102.87 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4345,13 +6121,12 @@
 		)
 		(uuid "feedbcca-91c4-405f-9137-09d4046a6469")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 61.4498 93.9006 0)
+			(at 61.4498 102.7906 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
 			)
 		)
 	)
@@ -4422,6 +6197,7 @@
 		)
 	)
 	(symbol
+		(lib_name "CPLD_2")
 		(lib_id "CF_Interface_v2:CPLD")
 		(at 27.94 170.18 0)
 		(unit 3)
@@ -4432,25 +6208,23 @@
 		(fields_autoplaced yes)
 		(uuid "0e2c9ffb-cd5d-421b-bfe6-b70b5f3b5fd5")
 		(property "Reference" "U11"
-			(at 34.29 168.9099 0)
+			(at 27.94 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Value" "CPLD"
-			(at 34.29 171.4499 0)
+			(at 27.94 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" "COMET_footprints:Package_PLCC-44"
-			(at 27.94 175.26 0)
+			(at 27.94 170.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4459,7 +6233,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 27.94 175.26 0)
+			(at 27.94 170.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4468,7 +6242,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 27.94 170.18 0)
+			(at 27.94 165.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4584,11 +6358,86 @@
 		(pin "25"
 			(uuid "652e13a7-aa7f-48e1-9863-fcea3d588d06")
 		)
+		(pin "20"
+			(uuid "de5a47b1-8ef1-43fb-a488-24f3652e4d6b")
+		)
+		(pin "41"
+			(uuid "a9e409f0-0b4b-498c-b49f-9a79e72eb794")
+		)
+		(pin "4"
+			(uuid "25ac305e-5772-4685-86a7-d2df32f67ecf")
+		)
 		(instances
 			(project "CF_Interface_v2"
 				(path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/5925358b-9ea5-4865-a664-eb9169d83490"
 					(reference "U11")
 					(unit 3)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 231.14 125.73 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "22188f80-f510-4255-9163-3ac7938e9298")
+		(property "Reference" "#PWR066"
+			(at 231.14 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 231.14 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 231.14 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 231.14 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 231.14 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "81ef0bc9-e8b9-43be-a146-ec5e1e6da0f9")
+		)
+		(instances
+			(project "CF_Interface_v2"
+				(path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/5925358b-9ea5-4865-a664-eb9169d83490"
+					(reference "#PWR066")
+					(unit 1)
 				)
 			)
 		)
@@ -4664,8 +6513,9 @@
 		)
 	)
 	(symbol
+		(lib_name "CPLD_1")
 		(lib_id "CF_Interface_v2:CPLD")
-		(at 142.24 73.66 0)
+		(at 142.24 78.74 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4823,11 +6673,175 @@
 		(pin "25"
 			(uuid "3f69c4f8-3657-4396-82da-d965a4e8bf76")
 		)
+		(pin "4"
+			(uuid "b95ed223-962d-4d69-84cd-a905bf6ed34d")
+		)
+		(pin "20"
+			(uuid "ab2f6d73-3a06-4239-89e8-ed84df5cd265")
+		)
+		(pin "21"
+			(uuid "009d1d26-faf9-4b77-a6c7-7cf1f3d45f07")
+		)
+		(pin "24"
+			(uuid "f554ae6c-6194-4011-a016-a63c012d6a2f")
+		)
 		(instances
 			(project "CF_Interface_v2"
 				(path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/5925358b-9ea5-4865-a664-eb9169d83490"
 					(reference "U11")
 					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "COMET_symbols:74x1G07")
+		(at 231.14 120.65 0)
+		(unit 1)
+		(convert 2)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "29def795-1905-412d-a9c6-0a816d27c821")
+		(property "Reference" "U18"
+			(at 241.3 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "74LVC1G07"
+			(at 241.3 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "COMET_footprints:Package_SOT23-5"
+			(at 231.14 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 231.14 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Buffer with open-drain output"
+			(at 231.14 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "5cd67860-950d-48bb-9286-f61029741cd3")
+		)
+		(pin "4"
+			(uuid "dc15a9b0-6628-4965-9659-96115a656332")
+		)
+		(pin "3"
+			(uuid "526b20a1-3f09-4dad-9ba8-0b263ce6b271")
+		)
+		(pin "5"
+			(uuid "346024bd-e464-47b7-9722-9039488aa60c")
+		)
+		(instances
+			(project "CF_Interface_v2"
+				(path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/5925358b-9ea5-4865-a664-eb9169d83490"
+					(reference "U18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "COMET_symbols:74x1G07")
+		(at 231.14 120.65 0)
+		(unit 2)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2ab9023d-2a81-452c-8eaa-43e6e81897f1")
+		(property "Reference" "U18"
+			(at 232.41 120.6499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "74LVC1G07"
+			(at 232.41 121.9199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "COMET_footprints:Package_SOT23-5"
+			(at 231.14 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 231.14 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Buffer with open-drain output"
+			(at 231.14 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "518a0eb3-3343-4cc6-b11d-e5f4113b2c81")
+		)
+		(pin "4"
+			(uuid "207e5d08-fd54-438b-8248-ba9da7a728ed")
+		)
+		(pin "3"
+			(uuid "211d2660-19e2-465f-855a-74751e2bd1fc")
+		)
+		(pin "5"
+			(uuid "13fec832-3530-4c65-ac8c-bc78c7c520e3")
+		)
+		(instances
+			(project "CF_Interface_v2"
+				(path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/5925358b-9ea5-4865-a664-eb9169d83490"
+					(reference "U18")
+					(unit 2)
 				)
 			)
 		)
@@ -5171,6 +7185,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+5V")
+		(at 231.14 115.57 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "63af6f0b-0d9a-4ee4-a370-6af98d810d93")
+		(property "Reference" "#PWR065"
+			(at 231.14 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 231.14 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 231.14 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 231.14 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 231.14 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e6306b9d-f048-4ccc-81e4-911b7e723e37")
+		)
+		(instances
+			(project "CF_Interface_v2"
+				(path "/9d49a333-d5ad-4058-b99f-23ea3249a5a8/5925358b-9ea5-4865-a664-eb9169d83490"
+					(reference "#PWR065")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "COMET_symbols:C")
 		(at 53.34 180.34 0)
 		(unit 1)
@@ -5251,7 +7331,7 @@
 		(fields_autoplaced yes)
 		(uuid "770aaf61-3306-4619-9f23-96ba36ed48f6")
 		(property "Reference" "U11"
-			(at 142.24 116.84 0)
+			(at 142.24 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5259,7 +7339,7 @@
 			)
 		)
 		(property "Value" "CPLD"
-			(at 142.24 119.38 0)
+			(at 142.24 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5267,7 +7347,7 @@
 			)
 		)
 		(property "Footprint" "COMET_footprints:Package_PLCC-44"
-			(at 142.24 132.08 0)
+			(at 142.24 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5276,7 +7356,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 142.24 132.08 0)
+			(at 142.24 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5285,7 +7365,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 142.24 127 0)
+			(at 142.24 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5400,6 +7480,15 @@
 		)
 		(pin "25"
 			(uuid "924a9ae6-e684-4fb7-bdfd-d3561a656f82")
+		)
+		(pin "4"
+			(uuid "426b3690-0f92-40ce-bb1e-c792a9e35509")
+		)
+		(pin "20"
+			(uuid "7585f643-ae12-46c0-b912-3d0ad2f86bd9")
+		)
+		(pin "41"
+			(uuid "c4490621-bf56-477e-91b7-d57976a7f50b")
 		)
 		(instances
 			(project "CF_Interface_v2"
@@ -5822,10 +7911,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "518a0eb3-3343-4cc6-b11d-e5f4113b2c81")
+			(uuid "518a0eb3-3343-4cc6-b11d-e5f4113b2c82")
 		)
 		(pin "4"
-			(uuid "207e5d08-fd54-438b-8248-ba9da7a728ed")
+			(uuid "207e5d08-fd54-438b-8248-ba9da7a728ee")
 		)
 		(pin "3"
 			(uuid "5a5e5e88-8390-4fa1-90f7-fe3f9a3f8225")
@@ -6131,10 +8220,10 @@
 			(uuid "a196e559-cf07-46d2-9958-d241a3ccd1d5")
 		)
 		(pin "3"
-			(uuid "526b20a1-3f09-4dad-9ba8-0b263ce6b271")
+			(uuid "526b20a1-3f09-4dad-9ba8-0b263ce6b272")
 		)
 		(pin "5"
-			(uuid "346024bd-e464-47b7-9722-9039488aa60c")
+			(uuid "346024bd-e464-47b7-9722-9039488aa60d")
 		)
 		(instances
 			(project "CF_Interface_v2"

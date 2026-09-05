@@ -1,3 +1,10 @@
+
+/*
+ * 2025:
+ *  - modified to use atf15xx_yosys for compilation, with pin assigments in comments at the bottom
+ *    and splitting the address bits instead of using a register with a non-zero starting bit
+ */
+
 `timescale 1ns/1ps
 
 module CF_CPLD
@@ -17,11 +24,13 @@ module CF_CPLD
     input n_lds,
     input n_write,
     input [2:0] fc,
-    input [5:4] addr,
+    input addr_4,
+    input addr_5,
     output logic n_dtack_drv,
     output logic ddir,
     output logic n_dben,
-    
+    output berr,
+
     /* Status/control register interface */
     input [1:0] t,
     output logic n_rdstat,
@@ -33,10 +42,12 @@ module CF_CPLD
     output logic n_rd,
     output logic n_wr,
     output logic cf_ddir,
-    
+
     /* Other */
     input func1,
-    output logic debug1
+    output logic debug1,
+    output logic debug2,
+    output reg debug3
 );
     /* Signal synchronisation */
     reg n_sel_reg1;
@@ -48,7 +59,7 @@ module CF_CPLD
     wire n_sel_regd = !(!n_sel_reg1 && !n_sel_reg2);
     wire n_uds_regd = !(!n_uds_reg1 && !n_uds_reg2);
     wire n_lds_regd = !(!n_lds_reg1 && !n_lds_reg2);
-    
+
     /* Cycle timing modes 
      *
      * MODE_PIO01 provides timing that is standards compatible with PIO mode 0 and by extension PIO
@@ -73,22 +84,22 @@ module CF_CPLD
     /* Shift registers used to generate all of the timings based on the selected PIO mode */
     reg [SU_TIMER_BITS-1:0] su_timer;
     reg [C_TIMER_BITS-1:0] c_timer;
-    
+
     /* State machine */
     reg [1:0] m_state;
-    
+
     localparam
         M_IDLE = 2'd0,
         M_ACCESS = 2'd1,
         M_RECOVERY = 2'd2;
-    
+
     /* For creating a mux'ed select signals */
     wire selected;
     wire selected_pio;
-    
+
     /* A flag that indicates that the setup time for the selected PIO mode has been met */
     wire su_time_met;
-    
+
     /* Motorola 68000 CPU function codes */
     localparam
         FC_USER_DATA = 3'b001,
@@ -97,37 +108,42 @@ module CF_CPLD
         FC_SUP_PROG = 3'b110,
         FC_CPU_SPACE = 3'b111;
 
+    // TODO disabled for now
+    assign berr = 1'b1;
+
+    assign debug1 = n_uds_regd;
+    assign debug2 = n_lds_regd;
     always_comb begin
         /* Select signals */
         selected     = (t == MODE_ASYNC) ? (!n_sel      && (fc == FC_SUP_DATA)) :
                                            (!n_sel_regd && (fc == FC_SUP_DATA));
         selected_pio = (t == MODE_ASYNC) ? 1'b0 : (!n_sel_regd && (fc == FC_SUP_DATA));
-        
+
         /* Generate the "setup time met" flag */
         su_time_met = ((t == MODE_PIO01) && su_timer[2]) ||
                       ((t == MODE_PIO23) && su_timer[1]) ||
                       ((t == MODE_PIO4)  && su_timer[0]);
-    
+
         /* Enable the system bus buffer when the card is decoded */
         n_dben = n_sel;
-        
+
         /* Set the direction of the system bus buffer based on the write signal. The direction is
          * high when reading, and low when writing. */
         ddir = n_write;
-        
+
         /* Set the direction of the CF card data buffers. The direction is high when not decoded or
          * when writing, and low when reading. */
-        cf_ddir = !(selected && !addr[5] && n_write);
-        
+        cf_ddir = !(selected && !addr_5 && n_write);
+
         /* Chip selects based on A4: CS0 for the primary register set, CS1 for the alternative
          * register set */
-        n_cs0 = (t == MODE_ASYNC) ? !(!addr[4] && selected) :
-                                    !(!addr[4] && selected && (m_state == M_ACCESS));
-        n_cs1 = (t == MODE_ASYNC) ? !( addr[4] && selected) :
-                                    !( addr[4] && selected && (m_state == M_ACCESS));
-        
+        n_cs0 = (t == MODE_ASYNC) ? !(!addr_4 && selected) :
+                                    !(!addr_4 && selected && (m_state == M_ACCESS));
+        n_cs1 = (t == MODE_ASYNC) ? !( addr_4 && selected) :
+                                    !( addr_4 && selected && (m_state == M_ACCESS));
+
         /* CF read/write signals */
-        n_rd = !(selected && !addr[5] && n_write &&
+        n_rd = !(selected && !addr_5 && n_write &&
                  (
                   ((!n_uds_regd || !n_lds_regd) && (m_state == M_ACCESS) &&
                    (
@@ -139,7 +155,7 @@ module CF_CPLD
                   ((t == MODE_ASYNC) && (!n_uds      || !n_lds))
                  )
                 );
-        n_wr = !(selected && !addr[5] && !n_write &&
+        n_wr = !(selected && !addr_5 && !n_write &&
                  (
                   ((!n_uds_regd || !n_lds_regd) && (m_state == M_ACCESS) &&
                    (
@@ -151,13 +167,13 @@ module CF_CPLD
                   ((t == MODE_ASYNC) && (!n_uds || !n_lds))
                  )
                 );
-        
+
         /* Read or write the status/control register (always async) */
-        n_rdstat = !(selected &&  n_write && addr[5] && !n_uds);
-        n_wrcon  = !(selected && !n_write && addr[5] && !n_uds);
-        
+        n_rdstat = !(selected &&  n_write && addr_5 && !n_uds);
+        n_wrcon  = !(selected && !n_write && addr_5 && !n_uds);
+
         /* Assert DTACK on any decoded opreation */
-        n_dtack_drv = !((selected && addr[5] && !n_uds) ||
+        n_dtack_drv = !((selected && addr_5 && !n_uds) ||
                         ((m_state == M_ACCESS) && (!n_uds_regd || !n_lds_regd) &&
                          (
                           ((t == MODE_PIO01) && c_timer[7]) ||
@@ -167,11 +183,11 @@ module CF_CPLD
                         ) ||
                         ((t == MODE_ASYNC) && selected && (!n_uds || !n_lds))
                        );
-        
+
         /* Debug */
-        debug1 = 1'b0;
+        //debug1 = 1'b0;
     end
-    
+
     /* Synchroniser phase 1 - first stage on falling edge of clock */
     always_ff @(negedge osc_40mhz or negedge n_reset) begin
         if (!n_reset) begin
@@ -185,7 +201,7 @@ module CF_CPLD
             n_lds_reg1 <= n_lds;
         end
     end
-    
+
     /* Synchroniser phase 2 - second stage on rising edge of clock such that signals are available
      * at next falling edge */
     always_ff @(posedge osc_40mhz or negedge n_reset) begin
@@ -211,12 +227,13 @@ module CF_CPLD
         else begin
             /* Otherwise, fill timers with 1's from the LSb */
             su_timer <= {su_timer[SU_TIMER_BITS-2:0], 1'b1};
-            
+
             if (su_time_met && (!n_uds_regd || !n_lds_regd) || (m_state == M_RECOVERY)) begin
                 c_timer <= {c_timer[C_TIMER_BITS-2:0], 1'b1};
             end
         end
 
+        debug3 <= su_timer[1];
         /* State machine */
         if (!n_reset) begin
             m_state <= M_IDLE;
@@ -227,11 +244,11 @@ module CF_CPLD
                     begin
                         /* When the select signal is asserted with A5 being low a CF access cycle
                          * is beginning */
-                        if (selected_pio && !addr[5]) begin
+                        if (selected_pio && !addr_5) begin
                             m_state <= M_ACCESS;
                         end
                     end
-                
+
                 M_ACCESS:
                     begin
                         /* Once select is negated, proceed to implement the cycle recovery delay */
@@ -239,7 +256,7 @@ module CF_CPLD
                             m_state <= M_RECOVERY;
                         end
                     end
-                
+
                 M_RECOVERY:
                     begin
                         /* Time out the recovery period based on the selected PIO mode then return
@@ -256,3 +273,35 @@ module CF_CPLD
 endmodule
 
 /* END */
+
+// Pin assignment
+//
+//PIN: CHIP "CF_Interface" ASSIGNED TO AN PLCC44
+//PIN: osc_40mhz    : 43
+//PIN: n_reset      : 1
+//PIN: fc_0         : 12
+//PIN: fc_1         : 9
+//PIN: fc_2         : 8
+//PIN: n_sel        : 44
+//PIN: n_lds        : 16
+//PIN: n_uds        : 17
+//PIN: n_wr         : 39
+//PIN: addr_5       : 5
+//PIN: addr_4       : 6
+//PIN: t_0          : 31
+//PIN: t_1          : 33
+//PIN: n_dtack_drv  : 11
+//PIN: n_rdstat     : 27
+//PIN: n_wrcon      : 28
+//PIN: n_rd         : 37
+//PIN: n_write      : 14
+//PIN: n_cs0        : 34
+//PIN: n_cs1        : 36
+//PIN: n_dben       : 19
+//PIN: cf_ddir      : 29
+//PIN: ddir         : 18
+//PIN: func1        : 25
+//PIN: berr         : 24
+//PIN: debug1       : 40
+//PIN: debug2       : 41
+//PIN: debug3       : 26

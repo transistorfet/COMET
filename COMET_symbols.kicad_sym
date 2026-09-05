@@ -16285,10 +16285,10 @@
 					)
 				)
 			)
-			(pin no_connect line
+			(pin passive line
 				(at -5.08 -17.78 0)
 				(length 5.08)
-				(name ""
+				(name "AM4"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -17126,7 +17126,7 @@
 			(pin passive line
 				(at -5.08 0 0)
 				(length 5.08)
-				(name "FC0"
+				(name "AM0"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -17144,7 +17144,7 @@
 			(pin passive line
 				(at -5.08 -2.54 0)
 				(length 5.08)
-				(name "FC1"
+				(name "AM1"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -17162,7 +17162,7 @@
 			(pin passive line
 				(at -5.08 -5.08 0)
 				(length 5.08)
-				(name "FC2"
+				(name "AM2"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -17177,10 +17177,10 @@
 					)
 				)
 			)
-			(pin no_connect line
+			(pin passive line
 				(at -5.08 -7.62 0)
 				(length 5.08)
-				(name ""
+				(name "AM3"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -18049,10 +18049,10 @@
 					)
 				)
 			)
-			(pin no_connect line
+			(pin passive line
 				(at -5.08 5.08 0)
 				(length 5.08)
-				(name ""
+				(name "AM5"
 					(effects
 						(font
 							(size 1.27 1.27)
